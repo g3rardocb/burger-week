@@ -1,0 +1,15 @@
+!-- views/pages/hamburguesas/detail.ejs -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Detalle de Hamburguesa</title>
+</head>
+<body>
+  <h1>Hamburguesa: <%= hamburguesa.nombre %></h1>
+  <img src="<%= hamburguesa.foto %>" width="300">
+  <p>Descripción: <%= hamburguesa.descripcion %></p>
+  <p>Precio: $<%= hamburguesa.precio %></p>
+  <p>Restaurante: <%= hamburguesa.Restaurante.nombre %></p>
+</body>
+</html>

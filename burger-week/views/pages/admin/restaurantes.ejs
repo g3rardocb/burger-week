@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><title>Admin · Restaurantes</title></head>
+<body>
+  <h1>Administración de Restaurantes</h1>
+
+  <a href="/admin/restaurantes/crear">+ Crear Restaurante</a>
+
+  <ul>
+    <% restaurantes.forEach(r => { %>
+      <li>
+        <img src="<%= r.logo %>" width="80" />
+        <strong><%= r.nombre %></strong>
+
+        <!-- ← aquí va el enlace de edición -->
+        <a href="/admin/restaurantes/editar/<%= r.id %>">Editar</a>
+
+        <!-- botón / formulario para eliminar -->
+        <form action="/admin/restaurantes/eliminar/<%= r.id %>" method="POST" style="display:inline">
+          <button type="submit">Eliminar</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

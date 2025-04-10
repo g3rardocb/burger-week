@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Crear Hamburguesa</title>
+</head>
+<body>
+  <h1>Nueva Hamburguesa</h1>
+  <form action="/hamburguesas/crear" method="POST" enctype="multipart/form-data">
+    <label>Nombre: </label>
+    <input type="text" name="nombre" required>
+
+    <label>Descripción: </label>
+    <textarea name="descripcion" required></textarea>
+
+    <label>Precio: </label>
+    <input type="number" step="0.01" name="precio" required>
+
+    <label>Foto: </label>
+    <input type="file" name="foto" accept="image/*" required>
+
+    <label>Restaurante: </label>
+    <select name="restauranteId">
+      <!-- Llenar con datos de restaurantes -->
+      <option value="1">Restaurante 1</option>
+      <option value="2">Restaurante 2</option>
+    </select>
+
+    <button type="submit">Guardar</button>
+  </form>
+</body>
+</html>

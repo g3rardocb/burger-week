@@ -1,0 +1,18 @@
+<!-- views/pages/hamburguesas/list.ejs -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Restaurantes Participantes</title>
+</head>
+<body>
+  <h1>Restaurantes Disponibles</h1>
+  <ul>
+    <% restaurantes.forEach(r => { %>
+      <li>
+        <img src="<%= r.logo %>" alt="<%= r.nombre %>" width="100" />
+        <strong><%= r.nombre %></strong>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
